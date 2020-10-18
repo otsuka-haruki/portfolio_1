@@ -36,11 +36,6 @@ h4 {
   border-bottom: 1px solid rgba(29, 29, 31, 0.5);
 }
 
-.flex-end {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .normal-font {
   font-family: YuGothic, "Yu Gothic", sans-serif;
 }
@@ -116,7 +111,6 @@ h4 {
 }
 
 .about {
-  color: #1d1d1f;
   max-width: 100%;
   background-color: white;
 }
@@ -146,9 +140,6 @@ h4 {
 }
 .about .intro-series {
   margin: 5vh 10vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
 }
 .about .intro-series h3 {
   color: #A58861;
@@ -163,9 +154,6 @@ h4 {
 }
 .about .intro-series p {
   line-height: 32px;
-}
-.about .intro-series .bold {
-  font-weight: bold;
 }
 @keyframes link-arrow {
   0% {
@@ -512,19 +500,15 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% 0;
+    margin: 5vh 0;
   }
   .about .image-box img {
-    width: 90%;
+    width: 90vw;
     height: auto;
     border-radius: 5px;
   }
   .about .intro-series {
     margin: 5vh 5vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: column;
   }
   .about .intro-series h3 {
     color: #A58861;
@@ -564,7 +548,7 @@ h4 {
   }
   .about .intro-series .about {
     width: 90vw;
-    margin-bottom: 10%;
+    margin: 0 auto 10%;
   }
   .about .intro-series .about .intro-series-h3 {
     text-align: center;
