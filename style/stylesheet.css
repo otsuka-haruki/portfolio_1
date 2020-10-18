@@ -520,7 +520,7 @@ h4 {
     border-radius: 5px;
   }
   .about .intro-series {
-    margin: 5vh 10vw;
+    margin: 5vh 5vw;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
