@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/stylesheet.min.css">
 
@@ -38,16 +39,30 @@
 </head>
 
 <body>
-  <div id="cover">
-    <p>Loaded!!</p>
-  </div>
+
+  <!-- アイコン -->
+
   <div class="icon">
     <a href="#top"><img src="./assets/images/favicon.png" alt="icon"></a>
   </div>
 
-  <div class="hero" id="top">
+  <!-- アイコン -->
 
-    <div class="title">
+  <!-- カバー -->
+
+  <div id="cover">
+    <p></p>
+    <div class="progress">
+      <div class="determinate"></div>
+    </div>
+  </div>
+
+  <!-- カバー -->
+
+  <!-- トップページ -->
+
+  <div class="hero row" id="top">
+    <div class="title col s12">
       <h1><span>ようこそ、</span>大塚遥輝の自己紹介サイトへ</h1>
       <p>Hello, Welcome!</p>
     </div>
@@ -62,12 +77,23 @@
     </div>
   </div>
 
+  <!-- トップページ -->
+
+  <!-- <div class="row hw100">
+    <div class="col l3 grey lighten-1">
+      <img src="./assets/images/me-circle.jpg" alt="">
+    </div>
+    <div class="col l9 white">
+      <h2>大塚遥輝</h2>
+    </div>
+  </div> -->
+
   <div class="about" id="about">
     <div class="section-title">
       <h2>About</h2>
     </div>
     <div class="image-box">
-      <img src="./assets/images/me.jpg" alt="myself">
+      <img src="./assets/images/me.webp" alt="myself">
     </div>
     <div class="intro-series">
       <div class="about">
@@ -260,18 +286,19 @@
   </div>
 
   <div class="progress-wrap">
-		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
       <i class="fas fa-arrow-up" id="progress-wrap-arrow"></i>
-		</svg>
-	</div>
+    </svg>
+  </div>
+
+
+  <!-- フッター -->
 
   <div class="footer">
-
     <div class="information">
       <h3>大塚遥輝</h3>
     </div>
-
     <div class="nav">
       <ul>
         <li><a href="#">Top</a></li>
@@ -289,6 +316,8 @@
         著作権を侵害せずに画像を使うために一部の画像をAmazonのAffiliateからリンクを貼っています。</p>
     </div>
   </div>
+
+  <!-- フッター -->
 
 </body>
 

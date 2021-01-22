@@ -432,7 +432,7 @@ h4 {
     text-align: center;
   }
   .hero .title h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero .title h1:after {
     display: block;
@@ -853,23 +853,51 @@ h4 {
 // test below
 
 #cover {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background: gold;
+  background: #1d1d1f;
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+  z-index: 1000;
   transition: .7s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   p {
-    font-size: 2em;
+    color: #A58861;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .progress {
+    width: 70%;
+    background-color: white;
+
+    .determinate {
+      background-color: #A58861;
+    }
   }
 }
 
 .upDisapper {
   transform: translateY(-100%);
 }
+
+.hw100 {
+  height: 100vh;
+  width: 100vw;
+
+  div {
+    height: 100%;
+  }
+}
+
+
+
+// structure
+
+// z-index
+// 100 icon
+// 1000 cover
