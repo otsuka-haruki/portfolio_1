@@ -25,6 +25,7 @@ h4 {
   color: #1e88e5;
   font-weight: bold;
 }
+
 .link:hover {
   border-bottom: 2px solid #1e88e5;
 }
@@ -33,6 +34,7 @@ h4 {
   color: #1d1d1f;
   border-bottom: 1px solid #1d1d1f;
 }
+
 .link-black:hover {
   color: rgba(29, 29, 31, 0.5);
   border-bottom: 1px solid rgba(29, 29, 31, 0.5);
@@ -58,6 +60,11 @@ h4 {
   }
 }
 
+.hw100 {
+  height: 100vh;
+  width: 100vw;
+}
+
 // common parts
 
 // icon
@@ -68,9 +75,10 @@ h4 {
   left: 5vw;
   transform: translate(-50%, -50%);
   z-index: 100;
-}
-.icon img {
-  width: 50px;
+
+  img {
+    width: 50px;
+  }
 }
 
 // icon
@@ -86,34 +94,42 @@ h4 {
   align-items: center;
   overflow: hidden;
 }
+
 .hero .title {
   text-align: center;
 }
+
 .hero .title h1 {
   font-size: 40px;
 }
+
 .hero .title h1:after {
   display: block;
   content: "";
   height: 40px;
 }
+
 .hero .title p {
   font-size: 40px;
   color: #A58861;
 }
+
 .hero .scroll-box {
   height: 15vh;
   position: absolute;
   bottom: 0;
   text-align: center;
 }
+
 .hero .scroll-box p {
   padding-bottom: 4px;
   letter-spacing: 2px;
 }
+
 .hero .scroll-box .scroll-arrow {
   overflow: hidden;
 }
+
 .hero .scroll-box .scroll-arrow .black-bar {
   margin: 0 auto;
   height: 13vh;
@@ -124,10 +140,12 @@ h4 {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(100%);
   }
 }
+
 .hero .scroll-box .scroll-arrow .golden-bar {
   width: 2px;
   margin: 0 auto;
@@ -135,14 +153,12 @@ h4 {
   background: #D5B891;
   animation: scroll 2s infinite;
 }
-
 // hero
-
-
 .who-am-i {
   background: #cfd8dc;
   width: 100%;
 }
+
 .who-am-i h3 {
   text-align: center;
   font-size: 20px;
@@ -154,6 +170,7 @@ h4 {
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .who-am-i .hobbies .hobby-card {
   width: 35vw;
   border: 1px solid #1d1d1f;
@@ -161,44 +178,54 @@ h4 {
   margin: 5vh 0;
   line-height: 32px;
 }
+
 .who-am-i .hobbies .hobby-card h4 {
   text-align: center;
 }
+
 .who-am-i .hobbies .hobby-card .images-box {
   padding-top: 2vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .who-am-i .hobbies .hobby-card .images-box a {
   display: block;
 }
+
 .who-am-i .hobbies .hobby-card .images-box img {
   height: 20vh;
 }
-.who-am-i .fav-people {
-}
+
+.who-am-i .fav-people {}
+
 .who-am-i .fav-people .person-cards {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .who-am-i .fav-people .person-cards .person-card {
   width: 15vw;
 }
+
 .who-am-i .fav-people .person-cards .person-card h4 {
   text-align: center;
   margin-bottom: 16px;
 }
+
 .who-am-i .fav-people .person-cards .person-card img {
   max-width: 100%;
   margin-bottom: 16px;
 }
+
 .who-am-i .dream .dream-cards {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .who-am-i .dream .dream-cards .dream-card {
   width: 25vw;
   border: 1px solid #1d1d1f;
@@ -206,6 +233,7 @@ h4 {
   margin: 5vh 0;
   line-height: 32px;
 }
+
 .who-am-i .dream .dream-cards .dream-card h4 {
   text-align: center;
 }
@@ -214,11 +242,13 @@ h4 {
   background-color: #1c313a;
   color: white;
 }
+
 .skills h3 {
   text-align: center;
   font-size: 20px;
   padding: 5vh 0;
 }
+
 .skills .section-title {
   height: 10vh;
   display: flex;
@@ -229,18 +259,21 @@ h4 {
   position: sticky;
   top: 0;
 }
+
 .skills .learned,
-.skills .learning {
-}
+.skills .learning {}
+
 .skills .skill_cards {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .skills .skill_card {
   margin: 5vh;
   width: 30vw;
 }
+
 .skills .skill_card h4 {
   text-align: center;
   color: #D5B891;
@@ -248,9 +281,11 @@ h4 {
   font-size: 20px;
   padding-bottom: 5vh;
 }
+
 .skills .skill_card p {
   line-height: 32px;
 }
+
 .skills .skill_card .a-button {
   display: flex;
   justify-content: center;
@@ -259,20 +294,23 @@ h4 {
   height: 45px;
   border: 2px solid white;
   position: relative;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
+
 .skills .skill_card .a-button:active {
   background: #D5B891;
   color: #1c313a;
   border: none;
 }
+
 .skills .skill_card .a-button:active:after {
   display: none;
 }
+
 .skills .skill_card .a-button:hover::after {
   transform: translate(5px, -5px);
 }
+
 .skills .skill_card .a-button::after {
   display: block;
   content: "";
@@ -284,49 +322,6 @@ h4 {
   background: rgba(245, 245, 245, 0.4);
   transition: transform 0.3s;
 }
-
-.footer {
-  background: white;
-  color: #1d1d1f;
-  width: 100%;
-}
-.footer h3 {
-  text-align: center;
-  font-size: 20px;
-  padding: 5vh 0 3vh;
-}
-.footer .nav {
-  margin: 0 25vw;
-}
-.footer .nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer .nav ul li {
-  display: block;
-  margin: 16px;
-}
-.footer .nav ul li a {
-  color: #1d1d1f;
-  border-bottom: 1px solid #1d1d1f;
-}
-.footer .nav ul li a:hover {
-  border-bottom: 1px solid rgba(29, 29, 31, 0.5);
-  color: rgba(29, 29, 31, 0.5);
-}
-.footer .thanks-message {
-  font-size: 25px;
-  text-align: center;
-  padding: 5vh 0;
-}
-.footer .cc {
-  font-size: 14px;
-  width: 60vw;
-  margin: 0 auto;
-  padding: 2vh 0;
-}
-
 // smartphones and tablets
 // smartphones and tablets
 // smartphones and tablets
@@ -337,13 +332,12 @@ h4 {
 // smartphones and tablets
 // smartphones and tablets
 // smartphones and tablets
-
 @media screen and (max-width: 860px) {
   html {
     height: 100%;
     width: 100%;
-    font-family: 'Cormorant Garamond', kinuta-maruminshinano-stdn, serif;
   }
+
   html body {
     height: 100%;
   }
@@ -356,26 +350,35 @@ h4 {
     position: fixed;
     top: 5vh;
     left: 10vw;
+
+    img {
+      width: 40px;
+    }
   }
 
   .hero {
     height: 100%;
   }
+
   .hero .title {
     text-align: center;
   }
+
   .hero .title h1 {
     font-size: 18px;
   }
+
   .hero .title h1:after {
     display: block;
     content: "";
     height: 20px;
   }
+
   .hero .title p {
     font-size: 25px;
     color: #A58861;
   }
+
   .hero .scroll-box {
     height: 100%;
     height: 15%;
@@ -383,14 +386,17 @@ h4 {
     bottom: 0;
     text-align: center;
   }
+
   .hero .scroll-box p {
     padding-bottom: 4px;
     letter-spacing: 2px;
   }
+
   .hero .scroll-box .scroll-arrow {
     height: 100%;
     overflow: hidden;
   }
+
   .hero .scroll-box .scroll-arrow .black-bar {
     margin: 0 auto;
     height: 100%;
@@ -401,10 +407,12 @@ h4 {
     0% {
       transform: translateY(-100%);
     }
+
     100% {
       transform: translateY(100%);
     }
   }
+
   .hero .scroll-box .scroll-arrow .golden-bar {
     width: 2px;
     margin: 0 auto;
@@ -417,14 +425,17 @@ h4 {
     background: #cfd8dc;
     width: 100%;
   }
+
   .who-am-i h3 {
     text-align: center;
     font-size: 20px;
     padding: 3vh 0;
   }
+
   .who-am-i p {
     line-height: 28px;
   }
+
   .who-am-i .section-title {
     text-align: center;
     position: sticky;
@@ -436,74 +447,89 @@ h4 {
     background: #cfd8dc;
     z-index: 10;
   }
+
   .who-am-i .section-title h2 {
     font-size: 30px;
     font-weight: bold;
   }
-  .who-am-i .hobbies {
-  }
+
+  .who-am-i .hobbies {}
+
   .who-am-i .hobbies .hobby-cards {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
   }
+
   .who-am-i .hobbies .hobby-card {
     width: 80vw;
     border: 1px solid #1d1d1f;
     padding: 16px;
     margin: 5vh 0;
   }
+
   .who-am-i .hobbies .hobby-card h4 {
     text-align: center;
   }
+
   .who-am-i .hobbies .hobby-card .images-box {
     padding-top: 2vh;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
   }
+
   .who-am-i .hobbies .hobby-card .images-box a {
     display: block;
   }
+
   .who-am-i .hobbies .hobby-card .images-box img {
     height: 20vh;
   }
-  .who-am-i .fav-people {
-  }
+
+  .who-am-i .fav-people {}
+
   .who-am-i .fav-people .person-cards {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
   }
+
   .who-am-i .fav-people .person-cards .person-card {
     width: 70vw;
     text-align: center;
   }
+
   .who-am-i .fav-people .person-cards .person-card img {
     max-width: 50%;
     margin-bottom: 16px;
     border-radius: 5px;
   }
+
   .who-am-i .fav-people .person-cards .person-card h4 {
     margin-bottom: 16px;
   }
+
   .who-am-i .fav-people .person-cards .person-card p {
     margin-bottom: 5vh;
     text-align: left;
   }
+
   .who-am-i .dream .dream-cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
+
   .who-am-i .dream .dream-cards .dream-card {
     width: 80vw;
     border: 1px solid #1d1d1f;
     padding: 16px;
   }
+
   .who-am-i .dream .dream-cards .dream-card h4 {
     text-align: center;
   }
@@ -512,11 +538,13 @@ h4 {
     background-color: #1c313a;
     color: white;
   }
+
   .skills h3 {
     text-align: center;
     font-size: 20px;
     padding: 3vh 0;
   }
+
   .skills .section-title {
     height: 10vh;
     display: flex;
@@ -528,19 +556,19 @@ h4 {
     top: 0;
     z-index: 10;
   }
-  .skills .learned,
-  .skills .learning {
-  }
+
   .skills .skill_cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
+
   .skills .skill_card {
     margin: 5vh 0;
     width: 80vw;
   }
+
   .skills .skill_card h4 {
     text-align: center;
     color: #D5B891;
@@ -548,9 +576,11 @@ h4 {
     font-size: 20px;
     padding-bottom: 5vh;
   }
+
   .skills .skill_card p {
     line-height: 32px;
   }
+
   .skills .skill_card .a-button {
     display: flex;
     justify-content: center;
@@ -559,20 +589,23 @@ h4 {
     height: 45px;
     border: 2px solid white;
     position: relative;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
   }
+
   .skills .skill_card .a-button:active {
     background: #D5B891;
     color: #1c313a;
     border: none;
   }
+
   .skills .skill_card .a-button:active:after {
     display: none;
   }
+
   .skills .skill_card .a-button:hover::after {
     transform: translate(5px, -5px);
   }
+
   .skills .skill_card .a-button::after {
     display: block;
     content: "";
@@ -584,50 +617,7 @@ h4 {
     background: rgba(245, 245, 245, 0.4);
     transition: transform 0.3s;
   }
-
-  .footer {
-    background: white;
-    color: #1d1d1f;
-    width: 100%;
-  }
-  .footer h3 {
-    text-align: center;
-    font-size: 20px;
-    padding: 5vh 0 3vh;
-  }
-  .footer .nav {
-    margin: 0 15vw;
-  }
-  .footer .nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .footer .nav ul li {
-    display: block;
-    margin: 10px;
-  }
-  .footer .nav ul li a {
-    color: #1d1d1f;
-    border-bottom: 1px solid #1d1d1f;
-  }
-  .footer .nav ul li a:hover {
-    border-bottom: 1px solid rgba(29, 29, 31, 0.5);
-    color: rgba(29, 29, 31, 0.5);
-  }
-  .footer .thanks-message {
-    font-size: 25px;
-    text-align: center;
-    padding: 5vh 0;
-  }
-  .footer .cc {
-    font-size: 14px;
-    width: 60vw;
-    margin: 0 auto;
-    padding: 2vh 0;
-  }
 }
-
 /* #Progress Circle
 ================================================== */
 .progress-wrap {
@@ -684,7 +674,6 @@ h4 {
 }
 
 // test below
-
 #cover {
   position: fixed;
   top: 0;
@@ -693,7 +682,7 @@ h4 {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  transition: .7s;
+  transition: 0.7s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -707,11 +696,11 @@ h4 {
   .progress {
     width: 70%;
     background-color: white;
-
     @keyframes progress-bar-animation {
       0% {
-        width: 0%;
+        width: 0;
       }
+
       100% {
         width: 100%;
       }
@@ -727,20 +716,7 @@ h4 {
 .upDisapper {
   transform: translateY(-100%);
 }
-
-.hw100 {
-  height: 100vh;
-  width: 100vw;
-
-  div {
-    height: 100%;
-  }
-}
-
-
-
 // structure
-
 // z-index
 // 100 icon
 // 500 progress-circle
