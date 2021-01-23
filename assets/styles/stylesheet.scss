@@ -1,8 +1,10 @@
+// common
+
 html {
   color: #1d1d1f;
   font-size: 16px;
   background-color: white;
-  font-family: 'Cormorant Garamond', YuGothic,'Yu Gothic',serif;
+  font-family: 'Noto Serif', 'Cormorant Garamond', kinuta-maruminshinano-stdn, serif;
 }
 
 body {
@@ -36,9 +38,29 @@ h4 {
   border-bottom: 1px solid rgba(29, 29, 31, 0.5);
 }
 
-.normal-font {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
+// common
+
+// common parts
+
+.section-title {
+  text-align: center;
+  position: sticky;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background: #cfd8dc;
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
 }
+
+// common parts
+
+// icon
 
 .icon {
   position: fixed;
@@ -50,6 +72,10 @@ h4 {
 .icon img {
   width: 50px;
 }
+
+// icon
+
+// hero
 
 .hero {
   position: relative;
@@ -110,94 +136,8 @@ h4 {
   animation: scroll 2s infinite;
 }
 
-.about {
-  max-width: 100%;
-  background-color: white;
-}
-.about .section-title {
-  text-align: center;
-  position: sticky;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  background: white;
-}
-.about .section-title h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-.about .image-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5vh 0;
-}
-.about .image-box img {
-  height: 50vh;
-  border-radius: 10px;
-}
-.about .intro-series {
-  margin: 5vh 10vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-.about .intro-series h3 {
-  color: #A58861;
-  font-weight: bold;
-  font-size: 25px;
-  padding-bottom: 16px;
-}
-.about .intro-series li,
-.about .intro-series p {
-  padding: 5px 0;
-  font-family: YuGothic, "Yu Gothic", sans-serif;
-}
-.about .intro-series p {
-  line-height: 32px;
-}
-@keyframes link-arrow {
-  0% {
-    transform: translateY(0%);
-  }
-  30% {
-    transform: translateY(20%);
-  }
-  60% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-.about .intro-series i {
-  padding: 0 4px;
-  animation: link-arrow 2.5s infinite;
-}
-.about .intro-series .link-black {
-  display: inline-block;
-  margin-top: 16px;
-}
-.about .intro-series .about {
-  width: 30vw;
-}
-.about .intro-series .about .intro-series-h3 {
-  text-align: center;
-}
-.about .intro-series .flex-horizontal {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 35vw;
-}
-.about .intro-series .flex-horizontal .hobbies-mini {
-  width: 15vw;
-}
-.about .intro-series .flex-horizontal .skills-mini {
-  width: 15vw;
-}
+// hero
+
 
 .who-am-i {
   background: #cfd8dc;
@@ -208,23 +148,7 @@ h4 {
   font-size: 20px;
   padding: 5vh 0;
 }
-.who-am-i .section-title {
-  text-align: center;
-  position: sticky;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  background: #cfd8dc;
-}
-.who-am-i .section-title h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-.who-am-i .hobbies {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
-}
+
 .who-am-i .hobbies .hobby-cards {
   display: flex;
   justify-content: space-around;
@@ -253,7 +177,6 @@ h4 {
   height: 20vh;
 }
 .who-am-i .fav-people {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
 }
 .who-am-i .fav-people .person-cards {
   display: flex;
@@ -308,7 +231,6 @@ h4 {
 }
 .skills .learned,
 .skills .learning {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
 }
 .skills .skill_cards {
   display: flex;
@@ -399,17 +321,28 @@ h4 {
   padding: 5vh 0;
 }
 .footer .cc {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
   font-size: 14px;
   width: 60vw;
   margin: 0 auto;
   padding: 2vh 0;
 }
 
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+// smartphones and tablets
+
 @media screen and (max-width: 860px) {
   html {
     height: 100%;
     width: 100%;
+    font-family: 'Cormorant Garamond', kinuta-maruminshinano-stdn, serif;
   }
   html body {
     height: 100%;
@@ -480,100 +413,6 @@ h4 {
     animation: scroll 2s infinite;
   }
 
-  .about {
-    color: #1d1d1f;
-    max-width: 100%;
-    background-color: white;
-  }
-  .about .section-title {
-    text-align: center;
-    position: sticky;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    background: white;
-    z-index: 10;
-  }
-  .about .section-title h2 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .about .image-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh 0;
-  }
-  .about .image-box img {
-    width: 90vw;
-    height: auto;
-    border-radius: 5px;
-  }
-  .about .intro-series {
-    margin: 5vh 5vw;
-    display: block;
-  }
-  .about .intro-series h3 {
-    color: #A58861;
-    font-weight: bold;
-    font-size: 20px;
-    padding-bottom: 16px;
-  }
-  .about .intro-series li,
-  .about .intro-series p {
-    padding: 5px 0;
-    font-family: YuGothic, "Yu Gothic", sans-serif;
-  }
-  .about .intro-series p {
-    line-height: 32px;
-  }
-  @keyframes link-arrow {
-    0% {
-      transform: translateY(0%);
-    }
-    30% {
-      transform: translateY(20%);
-    }
-    60% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  .about .intro-series i {
-    padding: 0 4px;
-    animation: link-arrow 2.5s infinite;
-  }
-  .about .intro-series .link-black {
-    display: inline-block;
-    margin-top: 16px;
-  }
-  .about .intro-series .about {
-    width: 90vw;
-    margin: 0 auto 10%;
-  }
-  .about .intro-series .about .intro-series-h3 {
-    text-align: center;
-  }
-  .about .intro-series .about .intro-series-h3 h3 {
-    font-size: 25px;
-  }
-  .about .intro-series .flex-horizontal {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 90vw;
-  }
-  .about .intro-series .flex-horizontal .hobbies-mini {
-    width: 40vw;
-  }
-  .about .intro-series .flex-horizontal .skills-mini {
-    width: 40vw;
-  }
-
   .who-am-i {
     background: #cfd8dc;
     width: 100%;
@@ -602,7 +441,6 @@ h4 {
     font-weight: bold;
   }
   .who-am-i .hobbies {
-    font-family: YuGothic, "Yu Gothic", sans-serif;
   }
   .who-am-i .hobbies .hobby-cards {
     display: flex;
@@ -632,7 +470,6 @@ h4 {
     height: 20vh;
   }
   .who-am-i .fav-people {
-    font-family: YuGothic, "Yu Gothic", sans-serif;
   }
   .who-am-i .fav-people .person-cards {
     display: flex;
@@ -693,7 +530,6 @@ h4 {
   }
   .skills .learned,
   .skills .learning {
-    font-family: YuGothic, "Yu Gothic", sans-serif;
   }
   .skills .skill_cards {
     display: flex;
@@ -785,7 +621,6 @@ h4 {
     padding: 5vh 0;
   }
   .footer .cc {
-    font-family: YuGothic, "Yu Gothic", sans-serif;
     font-size: 14px;
     width: 60vw;
     margin: 0 auto;
@@ -805,7 +640,7 @@ h4 {
   display: block;
   border-radius: 50px;
   box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
-  z-index: 10000;
+  z-index: 500;
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
@@ -821,8 +656,6 @@ h4 {
 
 #progress-wrap-arrow {
   position: absolute;
-  // font-family: 'unicons';
-  // content: '\e84b';
   text-align: center;
   line-height: 46px;
   font-size: 16px;
@@ -875,8 +708,18 @@ h4 {
     width: 70%;
     background-color: white;
 
+    @keyframes progress-bar-animation {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
     .determinate {
       background-color: #A58861;
+      animation: progress-bar-animation 2s forwards cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
 }
@@ -900,4 +743,5 @@ h4 {
 
 // z-index
 // 100 icon
+// 500 progress-circle
 // 1000 cover
