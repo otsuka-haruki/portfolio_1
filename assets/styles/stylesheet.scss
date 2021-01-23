@@ -1,7 +1,7 @@
 // variables
 
 $black: #1d1d1f;
-$gold: #A58861;
+$gold: #ceb286;
 
 // common
 
@@ -112,7 +112,7 @@ h4 {
 
 .hero .title p {
   font-size: 40px;
-  color: #A58861;
+  color: $gold;
 }
 
 .hero .scroll-box {
@@ -293,7 +293,7 @@ h4 {
 
   .hero .title p {
     font-size: 25px;
-    color: #A58861;
+    color: $gold;
   }
 
   .hero .scroll-box {
@@ -521,7 +521,7 @@ h4 {
   align-items: center;
 
   p {
-    color: #A58861;
+    color: $gold;
     font-family: 'EB Garamond', serif;
     font-size: 1.5em;
   }
@@ -540,7 +540,7 @@ h4 {
     }
 
     .determinate {
-      background-color: #A58861;
+      background-color: $gold;
       animation: progress-bar-animation 2s forwards cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
@@ -548,6 +548,53 @@ h4 {
 
 .upDisapper {
   transform: translateY(-100%);
+}
+
+@keyframes easeInBounce {
+	0% {
+		transform: translateY(0%);
+	}
+
+	// 4% {
+	// 	transform: translateY(-1.54%);
+	// }
+  //
+	// 8% {
+	// 	transform: translateY(-0.66%);
+	// }
+
+	18% {
+		transform: translateY(-6.25%);
+	}
+
+	// 26% {
+	// 	transform: translateY(-1.63%);
+	// }
+
+	// 46% {
+	// 	transform: translateY(-24.98%);
+	// }
+
+	46% {
+		transform: translateY(-1.99%);
+	}
+
+	// 76% {
+	// 	transform: translateY(-56.44%);
+	// }
+
+	// 88% {
+	// 	transform: translateY(-89.11%);
+	// }
+
+	100% {
+		transform: translateY(-100%);
+	}
+
+}
+
+.bounce-up {
+  animation: easeInBounce 1.5s forwards;
 }
 
 .hw100 {
