@@ -512,13 +512,6 @@ h4 {
 }
 // test below
 
-@supports (-webkit-touch-callout: none) {
-  #cover {
-    /* The hack for Safari */
-    height: -webkit-fill-available;
-  }
-}
-
 #cover {
   position: fixed;
   top: 0;
@@ -556,6 +549,13 @@ h4 {
       background-color: $gold;
       animation: progress-bar-animation 2s forwards cubic-bezier(0.65, 0, 0.35, 1);
     }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  #cover {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
   }
 }
 // .upDisapper {
