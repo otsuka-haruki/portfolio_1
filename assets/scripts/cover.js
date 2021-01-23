@@ -2,10 +2,8 @@
 export function coverAnimation() {
   const coverElement = document.getElementById('cover');
   const coverPhrase = coverElement.querySelector('p');
-
-  // const coverProgressBar = document.querySelector('#cover .determinate');
-  coverPhrase.textContent = 'loading';
-
+  coverPhrase.textContent = 'loading...';
+  
   setTimeout(() => {
     coverPhrase.textContent = 'loaded !';
   }, 2500);

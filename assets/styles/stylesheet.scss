@@ -1,7 +1,12 @@
+// variables
+
+$black: #1d1d1f;
+$gold: #A58861;
+
 // common
 
 html {
-  color: #1d1d1f;
+  color: $black;
   font-size: 16px;
   background-color: white;
   font-family: 'Noto Serif', 'Cormorant Garamond', kinuta-maruminshinano-stdn, serif;
@@ -17,6 +22,10 @@ h4 {
   font-weight: bold;
 }
 
+.text-gold {
+  color: $gold;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -24,26 +33,27 @@ h4 {
 .link {
   color: #1e88e5;
   font-weight: bold;
-}
 
-.link:hover {
-  border-bottom: 2px solid #1e88e5;
+  &:hover {
+    border-bottom: 2px solid #1e88e5;
+  }
 }
 
 .link-black {
-  color: #1d1d1f;
-  border-bottom: 1px solid #1d1d1f;
+  color: $black;
+  border-bottom: 1px solid $black;
+
+  &:hover {
+    color: rgba(29, 29, 31, 0.5);
+    border-bottom: 1px solid rgba(29, 29, 31, 0.5);
+  }
 }
 
-.link-black:hover {
-  color: rgba(29, 29, 31, 0.5);
-  border-bottom: 1px solid rgba(29, 29, 31, 0.5);
+.overflow-hidden {
+  overflow: hidden;
 }
-
 // common
-
 // common parts
-
 .section-title {
   text-align: center;
   position: sticky;
@@ -53,38 +63,29 @@ h4 {
   align-items: center;
   top: 0;
   background: #cfd8dc;
+  z-index: 99;
 
   h2 {
     font-size: 30px;
+    line-height: 10vh;
     font-weight: bold;
   }
 }
-
-.hw100 {
-  height: 100vh;
-  width: 100vw;
-}
-
 // common parts
-
 // icon
-
 .icon {
   position: fixed;
   top: 5vh;
   left: 5vw;
   transform: translate(-50%, -50%);
   z-index: 100;
-
-  img {
-    width: 50px;
-  }
 }
 
+.icon img {
+  width: 50px;
+}
 // icon
-
 // hero
-
 .hero {
   position: relative;
   height: 100vh;
@@ -134,7 +135,7 @@ h4 {
   margin: 0 auto;
   height: 13vh;
   width: 2px;
-  background: #1d1d1f;
+  background: $black;
 }
 @keyframes scroll {
   0% {
@@ -173,7 +174,7 @@ h4 {
 
 .who-am-i .hobbies .hobby-card {
   width: 35vw;
-  border: 1px solid #1d1d1f;
+  border: 1px solid $black;
   padding: 16px;
   margin: 5vh 0;
   line-height: 32px;
@@ -228,7 +229,7 @@ h4 {
 
 .who-am-i .dream .dream-cards .dream-card {
   width: 25vw;
-  border: 1px solid #1d1d1f;
+  border: 1px solid $black;
   padding: 16px;
   margin: 5vh 0;
   line-height: 32px;
@@ -238,89 +239,8 @@ h4 {
   text-align: center;
 }
 
-.skills {
+.background-color-skill {
   background-color: #1c313a;
-  color: white;
-}
-
-.skills h3 {
-  text-align: center;
-  font-size: 20px;
-  padding: 5vh 0;
-}
-
-.skills .section-title {
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  background: #1c313a;
-  position: sticky;
-  top: 0;
-}
-
-.skills .learned,
-.skills .learning {}
-
-.skills .skill_cards {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.skills .skill_card {
-  margin: 5vh;
-  width: 30vw;
-}
-
-.skills .skill_card h4 {
-  text-align: center;
-  color: #D5B891;
-  font-weight: bold;
-  font-size: 20px;
-  padding-bottom: 5vh;
-}
-
-.skills .skill_card p {
-  line-height: 32px;
-}
-
-.skills .skill_card .a-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 45px;
-  border: 2px solid white;
-  position: relative;
-  margin: 20px auto 0;
-}
-
-.skills .skill_card .a-button:active {
-  background: #D5B891;
-  color: #1c313a;
-  border: none;
-}
-
-.skills .skill_card .a-button:active:after {
-  display: none;
-}
-
-.skills .skill_card .a-button:hover::after {
-  transform: translate(5px, -5px);
-}
-
-.skills .skill_card .a-button::after {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -7px;
-  width: 200px;
-  height: 45px;
-  background: rgba(245, 245, 245, 0.4);
-  transition: transform 0.3s;
 }
 // smartphones and tablets
 // smartphones and tablets
@@ -336,6 +256,7 @@ h4 {
   html {
     height: 100%;
     width: 100%;
+    // font-family: 'Cormorant Garamond', kinuta-maruminshinano-stdn, serif;
   }
 
   html body {
@@ -350,10 +271,6 @@ h4 {
     position: fixed;
     top: 5vh;
     left: 10vw;
-
-    img {
-      width: 40px;
-    }
   }
 
   .hero {
@@ -401,7 +318,7 @@ h4 {
     margin: 0 auto;
     height: 100%;
     width: 2px;
-    background: #1d1d1f;
+    background: $black;
   }
   @keyframes scroll {
     0% {
@@ -464,7 +381,7 @@ h4 {
 
   .who-am-i .hobbies .hobby-card {
     width: 80vw;
-    border: 1px solid #1d1d1f;
+    border: 1px solid $black;
     padding: 16px;
     margin: 5vh 0;
   }
@@ -526,96 +443,12 @@ h4 {
 
   .who-am-i .dream .dream-cards .dream-card {
     width: 80vw;
-    border: 1px solid #1d1d1f;
+    border: 1px solid $black;
     padding: 16px;
   }
 
   .who-am-i .dream .dream-cards .dream-card h4 {
     text-align: center;
-  }
-
-  .skills {
-    background-color: #1c313a;
-    color: white;
-  }
-
-  .skills h3 {
-    text-align: center;
-    font-size: 20px;
-    padding: 3vh 0;
-  }
-
-  .skills .section-title {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background: #1c313a;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  .skills .skill_cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .skills .skill_card {
-    margin: 5vh 0;
-    width: 80vw;
-  }
-
-  .skills .skill_card h4 {
-    text-align: center;
-    color: #D5B891;
-    font-weight: bold;
-    font-size: 20px;
-    padding-bottom: 5vh;
-  }
-
-  .skills .skill_card p {
-    line-height: 32px;
-  }
-
-  .skills .skill_card .a-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 45px;
-    border: 2px solid white;
-    position: relative;
-    margin: 20px auto 0;
-  }
-
-  .skills .skill_card .a-button:active {
-    background: #D5B891;
-    color: #1c313a;
-    border: none;
-  }
-
-  .skills .skill_card .a-button:active:after {
-    display: none;
-  }
-
-  .skills .skill_card .a-button:hover::after {
-    transform: translate(5px, -5px);
-  }
-
-  .skills .skill_card .a-button::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -7px;
-    width: 200px;
-    height: 45px;
-    background: rgba(245, 245, 245, 0.4);
-    transition: transform 0.3s;
   }
 }
 /* #Progress Circle
@@ -672,13 +505,12 @@ h4 {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-
 // test below
 #cover {
   position: fixed;
   top: 0;
   left: 0;
-  background: #1d1d1f;
+  background: $black;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -691,6 +523,7 @@ h4 {
   p {
     color: #A58861;
     font-family: 'EB Garamond', serif;
+    font-size: 1.5em;
   }
 
   .progress {
@@ -716,8 +549,14 @@ h4 {
 .upDisapper {
   transform: translateY(-100%);
 }
+
+.hw100 {
+  height: 100vh;
+  width: 100vw;
+}
 // structure
 // z-index
+// 99 section title
 // 100 icon
 // 500 progress-circle
 // 1000 cover
