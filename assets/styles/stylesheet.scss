@@ -1,7 +1,6 @@
 // variables
 $black: #1d1d1f;
 $gold: #ceb286;
-
 // common
 html {
   color: $black;
@@ -55,6 +54,10 @@ h4 {
   overflow: hidden;
 }
 
+.margin-no {
+  margin: 0;
+}
+
 .margin-bottom-0 {
   margin-bottom: 0;
 }
@@ -71,6 +74,20 @@ h4 {
 .flex-space-around {
   justify-content: space-around;
   align-items: center;
+}
+
+.image-child-width-85-percent {
+  img {
+    width: 85%;
+    height: auto;
+    border: 1px solid #37474f;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+.height-100-percent {
+  height: 100%;
 }
 // common
 // common parts
@@ -118,19 +135,15 @@ h4 {
   overflow: hidden;
 }
 
-.hero .title {
-  text-align: center;
-}
-
 .hero .title h1 {
   font-size: 40px;
 }
 
-.hero .title h1:after {
-  display: block;
-  content: "";
-  height: 40px;
-}
+// .hero .title h1:after {
+//   display: block;
+//   content: "";
+//   height: 40px;
+// }
 
 .hero .title p {
   font-size: 40px;
@@ -184,6 +197,7 @@ h4 {
 }
 // skills
 //Progress Circle
+
 .progress-wrap {
   position: fixed;
   right: 25px;
@@ -383,20 +397,18 @@ h4 {
     height: -webkit-fill-available;
   }
 }
-// .upDisapper {
-//   transform: translateY(-100%);
-// }
+
 @keyframes bounce-up-animation {
   0% {
     transform: translateY(0%);
   }
 
-  18% {
-    transform: translateY(-12%);
+  28% {
+    transform: translateY(-20%);
   }
 
   70% {
-    transform: translateY(-2%);
+    transform: translateY(-6%);
   }
 
   100% {
@@ -412,6 +424,20 @@ h4 {
   height: 100vh;
   width: 100vw;
 }
+
+// #about {
+//
+//   #about__left {
+//     .card {
+//       background: transparent;
+//     }
+//   }
+//   .card {
+//     border-bottom: 1px solid $black;
+//     box-shadow: none;
+//   }
+// }
+
 // structure
 // z-index
 // 99 section title
