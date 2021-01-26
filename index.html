@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&text=0123456789&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./assets/styles/stylesheet.min.css">
 
   <script>
@@ -105,7 +106,7 @@
 
   <!-- 自己紹介 -->
   <div class="row margin-bottom-0" id="about">
-    <div class="card blue-grey darken-3 margin-no">
+    <div class="card blue-grey darken-3 margin-no" id="about__banner">
       <div class="card-content center-align white-text">
         <h2>大塚 遥輝</h2>
         <p>東京大学 文学部美術史学科（内定） ２年生</p>
@@ -113,47 +114,87 @@
     </div>
     <div class="col l3 xl3 grey lighten-2 height-100-percent" id="about__left">
       <div>
-        <div class="card">
-          <div class="card-content center-align image-child-width-85-percent">
-            <img src="./assets/images/me-circle-black.png" alt="me" class="image-width-90-percent">
-            <h5 class="center-align">こんにちは！</h5>
-            <i class="fas fa-arrow-right right"></i>
+        <a href="#about" class="hide-in-desktop">
+          <div class="card">
+            <div class="card-content center-align image-child-width-85-percent">
+              <img src="./assets/images/me-circle-black.png" alt="me" class="image-width-90-percent">
+              <h5 class="center-align">こんにちは！</h5>
+            </div>
           </div>
-        </div>
+        </a>
+        <a href="#about">
+          <div class="card hover-translate-x">
+            <div class="card-content center-align image-child-width-85-percent">
+              <img src="./assets/images/me-circle-black.png" alt="me" class="image-width-90-percent">
+              <h5 class="center-align">こんにちは！</h5>
+            </div>
+          </div>
+        </a>
         <h4 class="center-align">メニュー</h4>
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title center-align">私のスキル</span>
-            <ul>
-              <li>プログラミング</li>
-              <li>Wordpress</li>
-              <li>ライティング</li>
-              <li>...</li>
-            </ul>
-            <i class="fas fa-arrow-down right"></i>
-          </div>
+        <div class="row hide-in-desktop a-tag-in-this-text-color-black">
+          <a href="#about">
+            <div class="col s3">
+              <p class="center-align">About</p>
+              <i class="fas fa-chevron-up i-center"></i>
+            </div>
+          </a>
+          <a href="#skills">
+            <div class="col s3 border-left">
+              <p class="center-align">Skills</p>
+              <i class="fas fa-chevron-down i-center"></i>
+            </div>
+          </a>
+          <a href="#works">
+            <div class="col s3 border-left">
+              <p class="center-align">Works</p>
+              <i class="fas fa-chevron-down i-center"></i>
+            </div>
+          </a>
+          <a href="#more">
+            <div class="col s3 border-left">
+              <p class="center-align">Hobby</p>
+              <i class="fas fa-chevron-down i-center"></i>
+            </div>
+          </a>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title center-align">実績</span>
-            <ul>
-              <li>WEBサイト運営</li>
-              <li>WEBアプリ作成</li>
-              <li>...</li>
-            </ul>
-            <i class="fas fa-arrow-down right"></i>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title center-align">趣味</span>
-            <ul>
-              <li>映画を観る</li>
-              <li>旅行に行く</li>
-              <li>...</li>
-            </ul>
-            <i class="fas fa-arrow-down right"></i>
-          </div>
+        <div class="hide-in-smart-phone">
+          <a href="#skills">
+            <div class="card hover-translate-y-down">
+              <div class="card-content">
+                <span class="card-title center-align">私のスキル</span>
+                <ul>
+                  <li>プログラミング</li>
+                  <li>Wordpress</li>
+                  <li>ライティング</li>
+                  <li>...</li>
+                </ul>
+              </div>
+            </div>
+          </a>
+          <a href="#works">
+            <div class="card hover-translate-y-down">
+              <div class="card-content">
+                <span class="card-title center-align">実績</span>
+                <ul>
+                  <li>WEBサイト運営</li>
+                  <li>WEBアプリ作成</li>
+                  <li>...</li>
+                </ul>
+              </div>
+            </div>
+          </a>
+          <a href="#more">
+            <div class="card hover-translate-y-down">
+              <div class="card-content">
+                <span class="card-title center-align">趣味</span>
+                <ul>
+                  <li>映画を観る</li>
+                  <li>旅行に行く</li>
+                  <li>...</li>
+                </ul>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -216,8 +257,11 @@
     <div class="row">
       <div class="col s12 l6 xl6">
         <div class="card background-color-skill">
-          <div class="card-content">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80">
             <span class="card-title text-gold">WEBサイト運営</span>
+          </div>
+          <div class="card-content">
             <p class="white-text">受験生を応援するWEBメディア、<a class="link" href="https://pokeyobi.jp" target="_blank" rel="noopener noreferrer">ポケット予備校</a>を運営しています。2020年の5月に開設して、現在は月に7000ユーザー、12000PVほどに成長させました。</p>
           </div>
           <div class="card-action">
@@ -227,8 +271,11 @@
       </div>
       <div class="col s12 l6 xl6">
         <div class="card background-color-skill">
-          <div class="card-content">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80">
             <span class="card-title text-gold">JavaScript</span>
+          </div>
+          <div class="card-content">
             <p class="white-text">Udemyで有料の英語講座を受講して勉強しました。現在はjQueryとReactを勉強しています。</p>
           </div>
           <div class="card-action">
@@ -463,7 +510,8 @@
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">2020年を振り返って<i class="right fas fa-chevron-down"></i></span>
             <p>
-              コロナウイルスによって乱された日常生活の中にも、大きな発見と成長があったように感じます。春先に流行し始めて緊急事態宣言が出た時、友達と外で遊ぶのが好きな僕はとてもストレスを感じました。大学生なのになんで、とコロナウイルスを恨んだり愚痴を言ったりしました。でもいくら愚痴を言ってもコロナウイルスは収束しませんでした。愚痴は結局、自分の感想でしかなく、世界になんの影響を与えませんでした。その無意味さを実感しました。<br>そこからは、状況に対応して自分がどう生きるべきかに集中するようになりました。リアルで会えないならZoomで食事会をする、自宅でできるプログラミングやサイト運営をやってみる、と言ったように、自分にコントロールできることに専念するようになりました。<br>「神よ、変えられないものを穏やかに受け入れる力を、変えるべきものを変える勇気を、そして、２つを区別する賢さを与えて下さい 」というニーバーの言葉がなんと正しいかを知りました。愚痴を１つも言わなくなったとまでは言いませんが、状況に合わせて生きることを学んだのは去年の最大の発見です。</p>
+              コロナウイルスによって乱された日常生活の中にも、大きな発見と成長があったように感じます。春先に流行し始めて緊急事態宣言が出た時、友達と外で遊ぶのが好きな僕はとてもストレスを感じました。大学生なのになんで、とコロナウイルスを恨んだり愚痴を言ったりしました。でもいくら愚痴を言ってもコロナウイルスは収束しませんでした。愚痴は結局、自分の感想でしかなく、世界になんの影響を与えませんでした。その無意味さを実感しました。<br>そこからは、状況に対応して自分がどう生きるべきかに集中するようになりました。リアルで会えないならZoomで食事会をする、自宅でできるプログラミングやサイト運営をやってみる、と言ったように、自分にコントロールできることに専念するようになりました。<br>「神よ、変えられないものを穏やかに受け入れる力を、変えるべきものを変える勇気を、そして、２つを区別する賢さを与えて下さい
+              」というニーバーの言葉がなんと正しいかを知りました。愚痴を１つも言わなくなったとまでは言いませんが、状況に合わせて生きることを学んだのは去年の最大の発見です。</p>
           </div>
         </div>
       </div>
@@ -477,7 +525,9 @@
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">映画とアダム・スミス<i class="right fas fa-chevron-down"></i></span>
-            <p>大学の授業でアダム・スミスの著書を読んだ時、映画がなぜ素晴らしいか、やっと分かったような気がしました。彼が書いたことは、簡単に言えば「人は共感を受けた時に深い満足を得る、逆に共感を得られなかった時はひどく衝撃を受ける」ということでした。<br>私たちは映画を見て、登場人物に共感し、時には涙まで流します。自分もこういう気持ちになることがあるな、と共感することは、逆に言えば「私の他にも同じような気持ちになる人がいるんだ、やっぱりあるよね、そういうこと」と確認することでもあります。共感し、共感される、それを映画は美しくドラマチックに描くから、私たちの気持ちは強く揺り動かされ、強く感動するのだと思います。<br>話の合う友達といると楽しいように、共感できる映画は良い友人であるからこそ、それを人は愛するのだと思いました。</p>
+            <p>
+              大学の授業でアダム・スミスの著書を読んだ時、映画がなぜ素晴らしいか、やっと分かったような気がしました。彼が書いたことは、簡単に言えば「人は共感を受けた時に深い満足を得る、逆に共感を得られなかった時はひどく衝撃を受ける」ということでした。<br>私たちは映画を見て、登場人物に共感し、時には涙まで流します。自分もこういう気持ちになることがあるな、と共感することは、逆に言えば「私の他にも同じような気持ちになる人がいるんだ、やっぱりあるよね、そういうこと」と確認することでもあります。共感し、共感される、それを映画は美しくドラマチックに描くから、私たちの気持ちは強く揺り動かされ、強く感動するのだと思います。<br>話の合う友達といると楽しいように、共感できる映画は良い友人であるからこそ、それを人は愛するのだと思いました。
+            </p>
           </div>
         </div>
       </div>
@@ -493,7 +543,11 @@
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">ザッカーバーグのHacker Way<i class="right fas fa-chevron-down"></i></span>
-            <p>先日、<a href="https://www.wired.com/2012/02/zuck-letter/" target="_blank" rel="noopener noreferrer">Mark Zuckerberg's Letter to Investors: 'The Hacker Way'（マーク・ザッカーバーグが投資家に向けた手紙）</a>という記事を読みました。「Done is better than perfect」という有名な言葉もこの中にありますが、私は「The Hacker Way」という内容にとても感心しました。手紙の中には「The Hacker Wayとは・・・継続的なイノベーションと繰返しによって物事を作り上げること・・・物事は必ず改善できると考えること・・・議論するよりも手を動かして作ってしまうこと」とありました。<br>プログラミングは実際はバグとの戦いと言われますが、自分で小さなWEBアプリを作って初めてその意味を実感し、また「The Hacker Way」の有効性を知りました。問題がある時、口を動かすのではなく、方法を考え何回もやってみてトライアンドエラーの中で解決していく、というアプローチは、プログラミングだけでなく何事にも機能するものだと信じています。例えば僕は、朝布団に入りながらカーテンを開けたいと思い、いろいろな方法を試して、最終的にヒモでカーテンの滑車を結び、柱の間に通して力の方向を変えることで縦方向にヒモを引っ張ると横方向にカーテンが開く、という仕組みを作りました。<br>何度も工夫をして解決する、という姿勢が、これから何度も役に立つと考えています。プログラミングを始めて良かったな、と思えたことの１つでした。</p>
+            <p>先日、<a href="https://www.wired.com/2012/02/zuck-letter/" target="_blank" rel="noopener noreferrer">Mark Zuckerberg's Letter to Investors: 'The Hacker Way'（マーク・ザッカーバーグが投資家に向けた手紙）</a>という記事を読みました。「Done is better than
+              perfect」という有名な言葉もこの中にありますが、私は「The Hacker Way」という内容にとても感心しました。手紙の中には「The Hacker Wayとは・・・継続的なイノベーションと繰返しによって物事を作り上げること・・・物事は必ず改善できると考えること・・・議論するよりも手を動かして作ってしまうこと」とありました。<br>プログラミングは実際はバグとの戦いと言われますが、自分で小さなWEBアプリを作って初めてその意味を実感し、また「The
+              Hacker
+              Way」の有効性を知りました。問題がある時、口を動かすのではなく、方法を考え何回もやってみてトライアンドエラーの中で解決していく、というアプローチは、プログラミングだけでなく何事にも機能するものだと信じています。例えば僕は、朝布団に入りながらカーテンを開けたいと思い、いろいろな方法を試して、最終的にヒモでカーテンの滑車を結び、柱の間に通して力の方向を変えることで縦方向にヒモを引っ張ると横方向にカーテンが開く、という仕組みを作りました。<br>何度も工夫をして解決する、という姿勢が、これから何度も役に立つと考えています。プログラミングを始めて良かったな、と思えたことの１つでした。
+            </p>
           </div>
         </div>
       </div>
@@ -507,7 +561,9 @@
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">アメリカという国の仕組みが最強な件<i class="right fas fa-chevron-down"></i></span>
-            <p>大学で、アメリカの移民の歴史の授業を取りましたが、やっぱりアメリカは最強だなと感じました。アメリカは移民の国で、広く移民を受け入れてきました。と同時に、アメリカは世界で最も正義を重視する国だとも思います。自ら奴隷を解放したのは歴史上アメリカだけ、と言われるように、人種、ジェンダー、あらゆることで正義を開いてきたのは常にアメリカです。そして決定的なのは、このような土壌があるから、世界中から優秀な人が集まるということです。第二の母国である中国も最近頑張ってるみたいですが、監視される弾圧的な中国と、自由で正義を重視するアメリカ、どちらに行きたいかとなれば人がアメリカを選ぶのは当然です。<br>友人にハーバードの学生がいますが、やっぱり東大生よりずっと優秀だと感じました。彼は東大にも受かりましたが、結局アメリカを選びました。優秀な人材を惹きつける、アメリカの強さはそういうところだと思います。それぞれの国の最も優秀な人がみんなアメリカに移ったら、他の国には勝ちようがないのは明白です。<br>移民（優秀な人）を受け入れるシステム、彼らが来たいと思う土壌、これがあるから、アメリカは最強なのだと考えます。</p>
+            <p>
+              大学で、アメリカの移民の歴史の授業を取りましたが、やっぱりアメリカは最強だなと感じました。アメリカは移民の国で、広く移民を受け入れてきました。と同時に、アメリカは世界で最も正義を重視する国だとも思います。自ら奴隷を解放したのは歴史上アメリカだけ、と言われるように、人種、ジェンダー、あらゆることで正義を開いてきたのは常にアメリカです。そして決定的なのは、このような土壌があるから、世界中から優秀な人が集まるということです。第二の母国である中国も最近頑張ってるみたいですが、監視される弾圧的な中国と、自由で正義を重視するアメリカ、どちらに行きたいかとなれば人がアメリカを選ぶのは当然です。<br>友人にハーバードの学生がいますが、やっぱり東大生よりずっと優秀だと感じました。彼は東大にも受かりましたが、結局アメリカを選びました。優秀な人材を惹きつける、アメリカの強さはそういうところだと思います。それぞれの国の最も優秀な人がみんなアメリカに移ったら、他の国には勝ちようがないのは明白です。<br>移民（優秀な人）を受け入れるシステム、彼らが来たいと思う土壌、これがあるから、アメリカは最強なのだと考えます。
+            </p>
           </div>
         </div>
       </div>

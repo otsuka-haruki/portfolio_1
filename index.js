@@ -3,6 +3,7 @@
 import {
   coverAnimation
 } from  './assets/scripts/cover.js';
+import * as DOMModificationFunctions from './assets/scripts/DOM_modifications.js';
  import {
    progressCircle
  } from './assets/scripts/libraries/progress-circle.js';
@@ -13,6 +14,7 @@ import {
 class App {
   constructor() {
     coverAnimation();
+    DOMModificationFunctions.modifyAboutLeftHeight();
     progressCircle();
     scrollBehavior();
   }

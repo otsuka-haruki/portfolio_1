@@ -18,6 +18,7 @@
   "homepage": "https://github.com/otsuka-haruki/portfolio#readme",
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "eslint": "^7.18.0",
     "postcss": "^8.2.4",
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.3.1",

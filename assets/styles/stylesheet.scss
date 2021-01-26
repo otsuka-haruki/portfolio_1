@@ -19,12 +19,19 @@ h4 {
   font-weight: bold;
 }
 
+.background-black {
+  background-color: $black;
+}
+
 .text-gold {
   color: $gold;
 }
 
-.background-black {
-  background-color: $black;
+.a-tag-in-this-text-color-black {
+
+  a {
+    color: $black;
+  }
 }
 
 .bold {
@@ -52,6 +59,10 @@ h4 {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.border-left {
+  border-left: 1px solid $black;
 }
 
 .margin-no {
@@ -88,6 +99,28 @@ h4 {
 
 .height-100-percent {
   height: 100%;
+}
+
+.hover-translate-x {
+  transition: .4s;
+
+  &:hover {
+    transform: translateX(10%);
+  }
+}
+
+.hover-translate-y-down {
+  transition: .4s;
+
+  &:hover {
+    transform: translateY(10%);
+  }
+}
+
+.i-center {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 // common
 // common parts
@@ -250,6 +283,12 @@ h4 {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
+
+@media screen and (min-width: 860px) {
+  .hide-in-desktop {
+    display: none;
+  }
+}
 // smartphones and tablets
 // smartphones and tablets
 // smartphones and tablets
@@ -271,7 +310,7 @@ h4 {
     height: 100%;
   }
 
-  .sp-none {
+  .hide-in-smart-phone {
     display: none;
   }
 
@@ -428,8 +467,15 @@ h4 {
 #about {
 
   #about__left {
+    height: 100%;
+
     .card {
       background: transparent;
+      color: $black;
+
+      &:hover {
+        background: #bdbdbd;
+      }
     }
   }
   .card {
