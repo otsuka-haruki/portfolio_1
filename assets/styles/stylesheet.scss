@@ -1,6 +1,7 @@
 // variables
 $black: #1d1d1f;
-$gold: #ceb286;
+$gold: #d2b071;
+$blue: #1565c0;
 // variables
 // common
 html {
@@ -146,7 +147,7 @@ h4 {
 // icon
 
 .icon {
-  position: fixed;
+  position: absolute;
   top: 5vh;
   left: 5vw;
   transform: translate(-50%, -50%);
@@ -316,7 +317,7 @@ h4 {
   }
 
   .icon {
-    position: fixed;
+    position: absolute;
     top: 5vh;
     left: 10vw;
   }
@@ -484,6 +485,8 @@ h4 {
     box-shadow: none;
   }
 }
+
+
 
 // structure
 // z-index
