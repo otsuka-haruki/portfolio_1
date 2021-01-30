@@ -39,12 +39,18 @@ export function coverAnimation() {
 
   const coverElement = document.getElementById('cover');
   const coverPhrase = coverElement.querySelector('p');
-  const coverSVG = coverElement.querySelector('svg');
   coverPhrase.textContent = 'Getting ready...';
 
   setTimeout(() => {
     bar.destroy();
-    coverPhrase.textContent = 'Welcome !';
+    coverPhrase.remove();
+    // coverPhrase.textContent = 'Welcome !';
+
+    new Vivus('test-svg', {
+      type: 'delayed',
+      duration: 50,
+      file: '../assets/images/welcome.svg',
+    });
   }, 2500);
 
   setTimeout(() => {
