@@ -1,60 +1,90 @@
 'use strict';
 export function coverAnimation() {
-  const bar = new ProgressBar.Line('#cover', {
-    strokeWidth: 2,
-    easing: 'easeInOut',
-    // duration: 1400,
-    color: '#FFEA82',
-    trailColor: '#eee',
-    trailWidth: 1,
-    svgStyle: {
-      width: '80%',
-      // height: '10px'
-    },
-    text: {
-      style: {
-        color: '#999',
-        position: 'absolute',
-        left: '50%',
-        top: '60%',
-        transform: 'translate(-50%, -50%)',
-        padding: 0,
-        margin: 0,
+  const windowWidth = document.body.clientWidth;
+  let bar;
+  if (windowWidth > 860) {
+    bar = new ProgressBar.Line('#cover__progress-bar-container', {
+      strokeWidth: .8,
+      easing: 'easeIn',
+      color: '#d2b071',
+      trailColor: '#eee',
+      trailWidth: .3,
+      svgStyle: {
+        width: '100%',
       },
-      autoStyleContainer: false
-    },
-    from: {
-      color: '#81d4fa'
-    },
-    to: {
-      color: '#ffcc80'
-    },
-    step: (state, bar) => {
-      bar.setText(`${Math.round(bar.value() * 100)} %`);
-      bar.path.setAttribute('stroke', state.color);
-    }
-  });
+      text: {
+        style: {
+          color: '#fff',
+          padding: 0,
+          margin: 0,
+        },
+        autoStyleContainer: false
+      },
+      from: {
+        color: '#f48fb1'
+      },
+      to: {
+        color: '#d2b071'
+      },
+      step: (state, bar) => {
+        bar.setText(`${Math.round(bar.value() * 100)} %`);
+        bar.path.setAttribute('stroke', state.color);
+      }
+    });
+  } else {
+    bar = new ProgressBar.Line('#cover__progress-bar-container', {
+      strokeWidth: 2,
+      easing: 'easeIn',
+      color: '#d2b071',
+      trailColor: '#eee',
+      trailWidth: .3,
+      svgStyle: {
+        width: '100%',
+      },
+      text: {
+        style: {
+          color: '#fff',
+          padding: 0,
+          margin: 0,
+        },
+        autoStyleContainer: false
+      },
+      from: {
+        color: '#f48fb1'
+      },
+      to: {
+        color: '#d2b071'
+      },
+      step: (state, bar) => {
+        bar.setText(`${Math.round(bar.value() * 100)} %`);
+        bar.path.setAttribute('stroke', state.color);
+      }
+    });
+  }
   bar.animate(1);
-
 
   const coverElement = document.getElementById('cover');
   const coverPhrase = coverElement.querySelector('p');
-  coverPhrase.textContent = 'Getting ready...';
+  const progressbarContainer = document.getElementById('cover__progress-bar-container');
+  coverPhrase.textContent = 'LOADING...';
 
-  setTimeout(() => {
-    bar.destroy();
-    coverPhrase.remove();
-    // coverPhrase.textContent = 'Welcome !';
+  window.onload = function() {
+    setTimeout(() => {
+      progressbarContainer.classList.add('fade-out');
+    }, 1000);
 
-    new Vivus('test-svg', {
-      type: 'delayed',
-      duration: 50,
-      file: '../assets/images/welcome.svg',
-    });
-  }, 2500);
+    setTimeout(() => {
+      progressbarContainer.remove();
+      new Vivus('welcome-svg', {
+        type: 'delayed',
+        duration: 100,
+        animTimingFunction: Vivus.EASE_IN,
+        file: '../assets/images/welcome.svg',
+      });
+    }, 2000);
 
-  setTimeout(() => {
-    coverElement.classList.add('bounce-up');
-  }, 3500);
-
+    setTimeout(() => {
+      coverElement.classList.add('bounce-up');
+    }, 4000);
+  }
 }
