@@ -66,6 +66,7 @@ export function coverAnimation() {
   const coverElement = document.getElementById('cover');
   const coverPhrase = coverElement.querySelector('p');
   const progressbarContainer = document.getElementById('cover__progress-bar-container');
+  const welcomeSVG = document.getElementById('welcome-svg');
   coverPhrase.textContent = 'LOADING...';
 
   window.onload = function() {
@@ -75,13 +76,13 @@ export function coverAnimation() {
 
     setTimeout(() => {
       progressbarContainer.remove();
+      welcomeSVG.classList.remove('hide');
       new Vivus('welcome-svg', {
         type: 'delayed',
         duration: 100,
         animTimingFunction: Vivus.EASE_IN,
-        file: '../assets/images/welcome.svg',
       });
-    }, 2000);
+    }, 1700);
 
     setTimeout(() => {
       coverElement.classList.add('bounce-up');
